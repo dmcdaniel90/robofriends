@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# RoboFriends - A React Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+RoboFriends is a React application that dynamically populates and allows users to search through a list of robots displayed on individual card components. This README provides an overview of the application's structure and functionality.
 
-## Available Scripts
+## Table of Contents
+- [Introduction](#introduction)
+- [Screenshot](#screenshot)
+- [Getting Started](#getting-started)
+- [Features](#features)
+- [Code Structure](#code-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-In the project directory, you can run:
+## Introduction
+RoboFriends is a simple and interactive web application that utilizes React to create a list of robot profiles. Users can search for specific robots by name, and the application dynamically filters the displayed robots based on the search query.
 
-### `npm start`
+## Screenshot
+![Screenshot](./public/screenshot.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
+To run the RoboFriends application locally, follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone this repository to your local machine.
+2. Open your terminal and navigate to the project directory.
+3. Run `npm install` to install the necessary dependencies.
+4. Run `npm start` to start the development server.
+5. Open your web browser and go to [http://localhost:3000](http://localhost:3000) to access the application.
 
-### `npm test`
+## Features
+RoboFriends offers the following features:
+- Displays a list of robot profiles as individual card components.
+- Allows users to search for robots by name, dynamically updating the card display.
+- Provides a loading screen while fetching robot data from a remote server.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Code Structure
+The application is structured into components as follows:
+- `App.js`: The main component that manages the state, fetches robot data, and handles user search input.
+- `CardList.js`: Displays a list of robot cards.
+- `SearchBox.js`: Provides a search input box for users to enter their search queries.
+- `Scroll.js`: Wraps the card list, enabling smooth scrolling.
 
-### `npm run build`
+## Installation
+To install and run the RoboFriends application, follow the [Getting Started](#getting-started) instructions.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
+Once the application is running locally, you can perform the following actions:
+- Enter a robot name in the search box to filter the displayed robots.
+- Scroll through the list of robot cards to view their profiles.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contributing
+Contributions to the RoboFriends project are welcome. If you'd like to contribute, please follow these steps:
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them with descriptive messages.
+4. Push your changes to your fork.
+5. Create a pull request to the original repository's `main` branch.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-### `npm run eject`
+Enjoy using RoboFriends to explore and search through a delightful array of robot profiles! If you have any questions or need assistance, feel free to reach out to Devin, the developer of this application.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
