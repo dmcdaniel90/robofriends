@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import placeholder from '../images/placeholder.jpg';
 
-const Card = ({name, email, id}) => {
+const Card = ({ name, email, id }) => {
+
+  const robotImageUrl = `https://robohash.org/${id}?size=200x200`;
+  const [hasImageLoaded, setImageLoaded] = useState(false);
+
   return ( 
     <div className="tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5">
-      <img src={`https://robohash.org/${id}?200x200`} alt="robots"/>
+      <img src={hasImageLoaded ? robotImageUrl : placeholder} alt="robots" onLoad={() => setImageLoaded(true)} />
       <div>
         <h2>{name}</h2>
         <p>{email}</p>
