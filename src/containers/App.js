@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { connect } from 'react-redux';
+import Header from "../components/Header";
 import CardList from "../components/CardList";
 import SearchBox from "../components/SearchBox";
 import Scroll from "../components/Scroll";
@@ -38,7 +39,7 @@ function App(props) {
     <h1 className = "f1 abs-centered" >Loading</h1> :
       (
         <div className="tc">
-          <h1 className="f1">RoboFriends</h1>
+          <Header />
           <SearchBox searchChange={onSearchChange} />
           <Scroll>
             <ErrorBoundary error={error}>

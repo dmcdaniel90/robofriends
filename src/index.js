@@ -1,4 +1,4 @@
-import React, {StrictMode} from 'react';
+import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
@@ -13,17 +13,18 @@ import { searchRobots, requestRobots } from './reducers';
 const logger = createLogger();
 const rootReducer = combineReducers({ searchRobots, requestRobots })
 //todo  TODO: createStore is deprecated, use configureStore instead 
-const store = createStore(rootReducer, applyMiddleware(thunk, logger)) //todo  TODO: remove logger for production
+const store = createStore(rootReducer, applyMiddleware(thunk)) //todo  TODO: remove logger for production
  
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  <>
     <Provider store={store}>
       <App />
     </Provider>
-  </StrictMode>
+  </>
 );
 
+//serviceWorkerRegistration.register();
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
