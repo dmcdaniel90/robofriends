@@ -8,7 +8,7 @@ const Card = ({ name, email, id }) => {
 
   return ( 
     <div className="tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5">
-      <img src={hasImageLoaded ? robotImageUrl : placeholder} alt="robots" onLoad={() => setImageLoaded(true)} />
+      <img src={hasImageLoaded ? robotImageUrl : placeholder} alt="robots" onLoad={() => setImageLoaded(true)} rel="preload" fetchpriority="high" width={"200px"} height={"200px"} />
       <div>
         <h2>{name}</h2>
         <p>{email}</p>

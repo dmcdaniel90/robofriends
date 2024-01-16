@@ -31,6 +31,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "purgecss --css build/static/css/*.css --content build/index.html build/static/js/*.js --output build/static/css",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
@@ -56,8 +57,9 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@fullhuman/postcss-purgecss": "^5.0.0",
     "@welldone-software/why-did-you-render": "^7.0.1",
-    "gh-pages": "^6.1.0",
+    "gh-pages": "^6.1.1",
     "react-scripts": "^5.0.1"
   }
 }
