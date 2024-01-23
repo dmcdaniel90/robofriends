@@ -5,7 +5,6 @@
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -41,7 +40,16 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "jest/no-large-snapshots": [
+        "warn",
+        {
+          "maxSize": 12,
+          "inlineMaxSize": 6
+        }
+      ]
+    }
   },
   "browserslist": {
     "production": [
@@ -58,6 +66,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@fullhuman/postcss-purgecss": "^5.0.0",
+    "@testing-library/react": "^14.1.2",
     "@welldone-software/why-did-you-render": "^7.0.1",
     "gh-pages": "^6.1.1",
     "react-scripts": "^5.0.1"

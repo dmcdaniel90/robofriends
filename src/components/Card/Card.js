@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import placeholder from '../images/placeholder.jpg';
+import placeholder from '../../images/placeholder.jpg';
 
 const Card = ({ name, email, id }) => {
 
@@ -8,7 +8,7 @@ const Card = ({ name, email, id }) => {
 
   return ( 
     <div className="tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5">
-      <img src={hasImageLoaded ? robotImageUrl : placeholder} alt="robots" onLoad={() => setImageLoaded(true)} rel="preload" fetchpriority="high" width={"200px"} height={"200px"} />
+      <img src={hasImageLoaded ? robotImageUrl : placeholder} alt="robots" onLoad={() => setImageLoaded(true)} rel="preload" fetchpriority="high" width={"200px"} height={"200px"} data-testid="card"/>
       <div>
         <h2>{name}</h2>
         <p>{email}</p>
@@ -16,5 +16,4 @@ const Card = ({ name, email, id }) => {
     </div>
   )
 }
-
 export default Card;

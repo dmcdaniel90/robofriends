@@ -1,12 +1,6 @@
-import React, { useEffect } from "react";
 import { connect } from 'react-redux';
-import Header from "../components/Header";
-import CardList from "../components/CardList";
-import SearchBox from "../components/SearchBox";
-import Scroll from "../components/Scroll";
-import ErrorBoundary from "../components/ErrorBoundary";
-import './App.css';
 import { setSearchField, requestRobots } from "../actions";
+import MainPage from "../components/MainPage/MainPage";
 
 const mapStateToProps = (state) => {
   return {
@@ -17,7 +11,7 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+export const mapDispatchToProps = (dispatch) => { //exported for testing
   return {
     onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
     onRequestRobots: () => dispatch(requestRobots())
@@ -25,29 +19,7 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 function App(props) {
-  const { searchField, onSearchChange, robots, onRequestRobots, isPending, error } = props;
-
-  useEffect(() => {
-    onRequestRobots();
-  }, [onRequestRobots]);
-
-  const filteredRobots = robots.filter(robot => {
-    return robot.name.toLowerCase().includes(searchField.toLowerCase())
-  })
-
-  return isPending ?
-    <h1 className = "f1 abs-centered" >Loading</h1> :
-      (
-        <div className="tc">
-          <Header />
-          <SearchBox searchChange={onSearchChange} />
-          <Scroll>
-            <ErrorBoundary error={error}>
-              <CardList robots={filteredRobots} />
-            </ErrorBoundary>
-          </Scroll>
-        </div>
-      ) 
-  }
+  return <MainPage {...props} />
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

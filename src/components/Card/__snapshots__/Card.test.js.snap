@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card expect to render Card component 1`] = `
+<div
+  class="tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5"
+>
+  <img
+    alt="robots"
+    data-testid="card"
+    fetchpriority="high"
+    height="200px"
+    rel="preload"
+    src="placeholder.jpg"
+    width="200px"
+  />
+  <div>
+    <h2>
+      John Doe
+    </h2>
+    <p>
+      johndoe@gmail.com
+    </p>
+  </div>
+</div>
+`;

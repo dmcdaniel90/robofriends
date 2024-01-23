@@ -1,9 +1,9 @@
 import React from "react";
-import Card from "./Card";
+import Card from "../Card/Card";
 
 const CardList = ({ robots }) => {
   return (
-    <div>
+    <div data-testid="card-list">
       {
         robots.map((user, i) => {
           return (
@@ -13,6 +13,7 @@ const CardList = ({ robots }) => {
               email={robots[i].email}
               key={i}
             />
+           
           );
         })
       }

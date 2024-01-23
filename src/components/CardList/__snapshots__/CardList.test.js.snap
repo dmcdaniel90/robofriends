@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardList expect to render CardList component 1`] = `
+<div
+  data-testid="card-list"
+>
+  <div
+    class="tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5"
+  >
+    <img
+      alt="robots"
+      data-testid="card"
+      fetchpriority="high"
+      height="200px"
+      rel="preload"
+      src="placeholder.jpg"
+      width="200px"
+    />
+    <div>
+      <h2>
+        John Snow
+      </h2>
+      <p>
+        john@gmail.com
+      </p>
+    </div>
+  </div>
+</div>
+`;
