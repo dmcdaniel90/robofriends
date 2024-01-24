@@ -14,19 +14,21 @@ function MainPage(props) {
     onRequestRobots();
   }, [onRequestRobots]);
 
-  const filteredRobots = robots.filter(robot => {
-    return robot.name.toLowerCase().includes(searchField.toLowerCase())
-  })
+  const filterRobots = () => {
+    return robots.filter(robot => {
+      return robot.name.toLowerCase().includes(searchField.toLowerCase())
+    })
+  }
 
   return isPending ?
     <h1 className = "f1 abs-centered" id="loading-screen">Loading</h1> :
       (
-        <div className="tc">
+        <div className="tc" data-testid="mainpage">
           <Header />
           <SearchBox searchChange={onSearchChange} />
           <Scroll>
             <ErrorBoundary error={error}>
-              <CardList robots={filteredRobots} />
+              <CardList robots={filterRobots()} />
             </ErrorBoundary>
           </Scroll>
         </div>

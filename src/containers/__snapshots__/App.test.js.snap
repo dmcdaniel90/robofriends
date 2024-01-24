@@ -1,9 +1,127 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders the MainPage component 1`] = `
+exports[`App component renders the App component 1`] = `
 <div>
   <div
     class="tc"
+    data-testid="mainpage"
+  >
+    <h1
+      class="f1"
+    >
+      RoboFriends
+    </h1>
+    <div
+      class="pa2"
+      data-testid="search-box"
+    >
+      <label
+        for="search"
+        hidden=""
+      >
+        Search Robots
+      </label>
+      <input
+        class="pa3 ba b--green bg-lightest-blue"
+        id="search"
+        placeholder="Search Robots"
+        type="search"
+      />
+    </div>
+    <div
+      style="overflow-y: scroll; border: 3px solid black; height: 800px;"
+    >
+      <div
+        data-testid="card-list"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App component renders the MainPage component by itself 1`] = `
+<div>
+  <div
+    class="tc"
+    data-testid="mainpage"
+  >
+    <h1
+      class="f1"
+    >
+      RoboFriends
+    </h1>
+    <div
+      class="pa2"
+      data-testid="search-box"
+    >
+      <label
+        for="search"
+        hidden=""
+      >
+        Search Robots
+      </label>
+      <input
+        class="pa3 ba b--green bg-lightest-blue"
+        id="search"
+        placeholder="Search Robots"
+        type="search"
+      />
+    </div>
+    <div
+      style="overflow-y: scroll; border: 3px solid black; height: 800px;"
+    >
+      <div
+        data-testid="card-list"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders the App component 1`] = `
+<div>
+  <div
+    class="tc"
+    data-testid="mainpage"
+  >
+    <h1
+      class="f1"
+    >
+      RoboFriends
+    </h1>
+    <div
+      class="pa2"
+      data-testid="search-box"
+    >
+      <label
+        for="search"
+        hidden=""
+      >
+        Search Robots
+      </label>
+      <input
+        class="pa3 ba b--green bg-lightest-blue"
+        id="search"
+        placeholder="Search Robots"
+        type="search"
+      />
+    </div>
+    <div
+      style="overflow-y: scroll; border: 3px solid black; height: 800px;"
+    >
+      <div
+        data-testid="card-list"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders the MainPage component by itself 1`] = `
+<div>
+  <div
+    class="tc"
+    data-testid="mainpage"
   >
     <h1
       class="f1"

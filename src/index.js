@@ -18,11 +18,11 @@ const store = createStore(rootReducer, applyMiddleware(thunk)) //todo  TODO: rem
  
 
 createRoot(document.getElementById('root')).render(
-  <>
+  <StrictMode>
     <Provider store={store}>
       <App />
     </Provider>
-  </>
+  </StrictMode>
 );
 
 serviceWorkerRegistration.register();

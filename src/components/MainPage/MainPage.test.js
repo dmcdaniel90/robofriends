@@ -1,24 +1,57 @@
-import { render, screen } from '../../utils/test-utils';
-import App from '../../containers/App';
+import { render, screen } from '@testing-library/react';
+import MainPage from './MainPage';
+
+let wrapper;
+
+beforeEach(() => {
+  const mockProps = {
+    onRequestRobots: jest.fn(),
+    robots: [],
+    searchField: '',
+    isPending: false,
+  }
+  wrapper = render(<MainPage {...mockProps} />)
+})
 
 
-describe('App', () => {
-  it('renders the App component', () => {
-    render(<App />)
+describe('MainPage', () => {
+  it('renders the MainPage component', () => {
+    expect(wrapper.baseElement).toMatchSnapshot();
   })
 
-  it('renders the Loading screen', async () => {
-    render(<App />)
-    const loadingScreen = await screen.findByText('Loading');
-    expect(loadingScreen).toBeInTheDocument();
-  })
+  it('renders the loading page if isPending is true', () => {
+    const mockProps = {
+      onRequestRobots: jest.fn(),
+      robots: [],
+      searchField: '',
+      isPending: true,
+    }
+    
+    render(<MainPage {...mockProps} />)
+    expect(screen.getByText(/Loading/i)).toBeInTheDocument();
+    }
+  )
 
-  it('renders the Header component once the loading screen has exited', async () => {
-    render(<App />)
-    await screen.findByTestId('card-list');
-
-    const header = await screen.findByText(/RoboFriends/)
-    expect(header).toBeInTheDocument();
+  it('filters robots correctly', async () => {
+    const mockProps2 = {
+      onRequestRobots: jest.fn(),
+      robots: [
+        {
+        id: 3,
+        name: 'John',
+        email: 'john@gmail.com'
+        },
+        {
+        id: 4,
+        name: 'Emily',
+        email: 'emily@gmail.com'
+        }
+      ],
+      searchField: 'emily',
+    }
+    render(<MainPage {...mockProps2} />)
+    expect(screen.queryAllByText(/emily/i)).toHaveLength(2);
+    expect(screen.queryAllByText(/john/i)).toHaveLength(0);
   })
 })
 

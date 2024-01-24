@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { setSearchField, requestRobots } from "../actions";
 import MainPage from "../components/MainPage/MainPage";
 
-const mapStateToProps = (state) => {
+export const mapStateToProps = (state) => {
   return {
     searchField: state.searchRobots.searchField,
     robots: state.requestRobots.robots,
@@ -18,7 +18,7 @@ export const mapDispatchToProps = (dispatch) => { //exported for testing
   }
 }
 
-function App(props) {
+export function App(props) {
   return <MainPage {...props} />
 }
 

@@ -44,8 +44,12 @@ RoboFriends offers the following features:
 
 The application is structured into components as follows:
 
-- `App.js`: The main component that manages the state, fetches robot data, and handles user search input.
+- `App.js`: The main component that manages the redux store and renders the Main Page.
+- `Card.js`: Displays an individual robot profile as a card component.
 - `CardList.js`: Displays a list of robot cards.
+- `ErrorBoundary.js`: Wraps the card list, catching any errors that occur during rendering.
+- `Header.js`: Displays the application header.
+- `MainPage.js`: Displays the main page of the application, including the header, search box, and card list.
 - `SearchBox.js`: Provides a search input box for users to enter their search queries.
 - `Scroll.js`: Wraps the card list, enabling smooth scrolling.
 
