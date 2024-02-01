@@ -1,4 +1,4 @@
-function ErrorBoundary (props) {
+function ErrorBoundary (props: { error: Error, children: React.ReactNode }): React.ReactNode {
 
   let { error } = props;
 

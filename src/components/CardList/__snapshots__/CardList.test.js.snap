@@ -10,9 +10,7 @@ exports[`CardList expect to render CardList component 1`] = `
     <img
       alt="robots"
       data-testid="card"
-      fetchpriority="high"
       height="200px"
-      rel="preload"
       src="placeholder.jpg"
       width="200px"
     />

@@ -1,11 +1,15 @@
-import React from "react";
 import Card from "../Card/Card";
+import { Robot } from "../../types/common";
 
-const CardList = ({ robots }) => {
+type CardListProps = {
+  robots: Array<Robot>
+}
+
+const CardList = ({ robots }: CardListProps) => {
   return (
     <div data-testid="card-list">
       {
-        robots.map((user, i) => {
+        robots.map((user: Robot, i: number) => {
           return (
             <Card
               id={robots[i].id}
