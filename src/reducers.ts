@@ -1,19 +1,22 @@
-import { CHANGE_SEARCH_FIELD } from './constants.js';
-import { REQUEST_ROBOTS_PENDING } from './constants.js';
-import { REQUEST_ROBOTS_SUCCESS } from './constants.js';
-import { REQUEST_ROBOTS_FAILED } from './constants.js';
+import { CHANGE_SEARCH_FIELD } from './constants.ts';
+import { REQUEST_ROBOTS_PENDING } from './constants.ts';
+import { REQUEST_ROBOTS_SUCCESS } from './constants.ts';
+import { REQUEST_ROBOTS_FAILED } from './constants.ts';
 
-const initialStateSearch = {
+import {Action, IState} from './types/common.ts';
+
+
+const initialStateSearch: IState = {
   searchField: ''
 }
 
-const initialStateRobots = {
+const initialStateRobots: IState = {
   robots: [],
   isPending: false,
   error: ''
 }
 
-export const searchRobots = (state = initialStateSearch, action = {}) => {
+export const searchRobots = (state = initialStateSearch, action = {} as Action): IState => {
   switch(action.type) {
     case CHANGE_SEARCH_FIELD:
       return Object.assign({}, state, {searchField: action.payload});
@@ -22,7 +25,7 @@ export const searchRobots = (state = initialStateSearch, action = {}) => {
   }
 }
 
-export const requestRobots = (state = initialStateRobots, action = {}) => {
+export const requestRobots = (state = initialStateRobots, action = {} as Action): IState => {
   switch(action.type) {
     case REQUEST_ROBOTS_PENDING:
       return Object.assign({}, state, {isPending: true});

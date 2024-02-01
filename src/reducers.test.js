@@ -3,9 +3,9 @@ import {
   REQUEST_ROBOTS_PENDING,
   REQUEST_ROBOTS_SUCCESS,
   REQUEST_ROBOTS_FAILED
-} from './constants.js';
+} from './constants.ts';
 
-import * as reducers from './reducers.js';
+import * as reducers from './reducers.ts';
 
 describe('searchRobots', () => {
   const initialStateSearch = {

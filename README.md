@@ -76,6 +76,6 @@ Contributions to the RoboFriends project are welcome. If you'd like to contribut
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License
 
 Enjoy using RoboFriends to explore and search through a delightful array of robot profiles! If you have any questions or need assistance, feel free to reach out to Devin, the developer of this application.
