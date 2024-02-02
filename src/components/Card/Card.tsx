@@ -1,13 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import placeholder from '../../images/placeholder.jpg';
+import { Robot } from "../../types/common";
 
-type CardProps = {
-  name: string,
-  email: string,
-  id: string
-}
-
-const Card = ({ name, email, id }: CardProps) => {
+const Card = ({ name, email, id }: Robot) => {
 
   const robotImageUrl: string = `https://robohash.org/${id}?size=200x200`;
   const [hasImageLoaded, setImageLoaded] = useState(false);

@@ -1,7 +1,7 @@
 {
   "name": "robofriends",
   "homepage": "https://dmcdaniel90.github.io/robofriends",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -32,6 +32,9 @@
     "workbox-routing": "^6.6.0",
     "workbox-strategies": "^6.6.0",
     "workbox-streams": "^6.6.0"
+  },
+  "overrides": {
+    "typescript": "^5.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
